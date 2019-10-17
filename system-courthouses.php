@@ -13,7 +13,7 @@ pika_init();
 require_once('pikaTempLib.php');
 
 
-$action = $_GET['action'];
+$action = DB::escapeString($_GET['action']);
 $base_url = pl_settings_get('base_url');
 
 $main_html = array();
